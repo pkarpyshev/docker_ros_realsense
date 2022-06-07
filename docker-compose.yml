@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  realsense:
+    build: .
+    working_dir: /realsense_dataset
+    privileged: true
+    environment:
+      - DISPLAY=:1
+    volumes:
+      - /dev:/dev
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./bags:/bags
+    network_mode: host
+
+    command: /bin/bash -c '. /opt/ros/noetic/setup.bash ; roslaunch record_bagfile.launch'
+
+
+#    command: source /opt/ros/noetic/setup.bash && roslaunch record_bagfile.launch
