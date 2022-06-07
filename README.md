@@ -1,5 +1,5 @@
 # docker_ros_realsense
-A docker container with ROS Noetic, librealsense2 and collection pipeline by @quetalasj 
+A docker container with ROS Noetic, librealsense2 and collection pipeline by [quetalasj](https://github.com/quetalasj/realsense_dataset).
 # Prerequisites:
 - X11
 # Setup:
